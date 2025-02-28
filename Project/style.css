@@ -1,0 +1,176 @@
+body {
+    background-color: black;
+    color: gold;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav a.logo-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+nav img.logo {
+    width: 50px; /* Adjust the width as needed */
+    height: auto;
+}
+nav ul {
+    margin-left: 60px; /* Adjust the margin to make space for the logo */
+}
+nav {
+    background-color: black;
+    overflow: hidden;
+    border-bottom: 1px solid gold;
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: gold;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color:rgb(83, 81, 70);
+}
+
+section {
+    height: 100vh; /* Full-screen height */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: gold;
+    padding: 20px;
+    border: 1px solid gold;
+    margin: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+section.active {
+    display: block;
+    opacity: 1;
+}
+
+#home { background-color: black; }
+#calculator { background-color: black; }
+#todo { background-color: black; }
+#tables { background-color: black; }
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+input[type=text], input[type=number] {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid gold;
+    background: black;
+    color: gold;
+}
+
+.addBtn, .deleteBtn, .generateBtn {
+    padding: 10px;
+    width: 20%;
+    background: gold;
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.addBtn:hover, .deleteBtn:hover, .generateBtn:hover {
+    background: #d4af37;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px;
+    background: black;
+    color: gold;
+    border: 1px solid gold;
+    margin-top: -1px; /* Prevent double borders */
+}
+
+ul li .close {
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Calculator styles */
+.calculator {
+    border: 1px solid gold;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: black;
+    color: gold;
+    width: 300px;
+    margin: auto;
+}
+
+.calculator-screen {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: black;
+    color: gold;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.calculator-keys button {
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+    background-color: gold;
+    border: none;
+    color: black;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calculator-keys button.operator {
+    background-color: #d4af37;
+}
+
+.calculator-keys button.equal-sign {
+    background-color: #ffbf00;
+    height: 60px;
+    width: 100px;
+}
+
+.calculator-keys button.all-clear {
+    background-color: #ff4d4d;
+}
