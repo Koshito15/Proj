@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #text {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 <nav>                    <!--links to different sections (Home, Calculator, ToDoList, Tables). -->
@@ -20,6 +29,19 @@
 </nav>
 <section id="home" class="active">
     <h1>HTML Structure:</h1>
+    
+    <h2>Select a color to change the font color:</h2>
+    
+    <!-- Dropdown menu to select color -->
+    <select id="colorSelector" onchange="changeFontColor()">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="purple">Purple</option>
+    </select>
+
+    <p id="text">This is the text whose color will change based on your selection.</p>
     <ul>
         <li>Navigation Bar: Contains links to different sections (Home, Calculator, ToDoList, Tables).</li>
         <li>Calculator Section: Contains a simple calculator with buttons for digits and operators.</li>
@@ -91,7 +113,13 @@
                         <button type="submit" class="generateBtn" onclick="generateTables()">Generate Tables</button>
                         <div id="tablesOutput"></div>
                     </section>
-
+                        <script>
+                        // Function to change font color based on selected color
+                        function changeFontColor() {
+                            var color = document.getElementById("colorSelector").value;
+                            document.getElementById("text").style.color = color;
+                        }
+                        </script>
                         <script>
                             function showSection(sectionId) {       //Switches the active section based on the clicked link.
                                 document.querySelectorAll('section').forEach(section => {
